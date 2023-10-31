@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <script>
+        function trabalhandoNome() {
+            //chamando a função
+            var name = prompt("Diga um nome", "Rafaela")
+            var sobrenome = prompt("Diga um sobrenome", "Scolaro")
+            var nomeCompleto = nome + " " + sobrenome
+            var tamanhoDoNome = nomeCompleto.length
+            alert("'" + nomeCompleto + "'" +
+                "/n" + "com tamanho = " + tamanhoDoNome)
+            var retorno = confirm("Seu nome é: " + nomeCompleto + "?")
+            if (retorno) {
+                console.log("beleza!")
+                document.write("confirmado o nome")
+            } else {
+                console.log("Ixi, deu ruim!")
+                document.write("Errou o nome")
+            }
+        }
+        trabalhandoNome()
+
+        function trabalhandoNúmeros() {
+            var num1 = prompt("diga um número")
+            var num2 = 5
+            var total = parseFloat(num1) + num2
+            alert("total= " + total)
+        }
+        //Int = INTEIROS
+        //Float = com ponto flutuante
+
+        trabalhandoNúmeros()
+
+        function validar(){
+				var email = gebi("idEmail").value; 
+				var senha = gebi("idSenha").value;
+			}
+			function maiuscula(){
+				var email = gebi("idEmail").value;
+				gebi("idEmail").value = email.toUpperCase();
+			}
+    </script>
+    <script type="text/javascript" scr="js/myscript.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Validar</h1>
+        <form>
+            <fieldset align="center" style="width:270px"> 
+                <legend>Login:</legend>
+                Email: <input id="idEmail" type="text" onblur="maiuscula();"><br>
+                Senha: <input id="idSenha" type="password"><br> 
+                <input type="button" value="Enviar" onclick="validar();"> 
+            </fieldset> 
+        </form>
+        </center>
+</body>
+</html>
