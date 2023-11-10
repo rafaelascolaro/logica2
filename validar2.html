@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <script>
+        
+        function validar(){
+                var Nome = gebi("idNome").value;
+                var Email = gebi("idEmail").value;
+				var Idade = gebi("idIdade").value; ;
+				var Altura = gebi("idAltura").value;
+                var Peso = gebi("idPeso").value;
+                var Senha = gebi("idSenha").value;
+               
+                if ((nome = "Fulano")) {
+                    alert("o nome está errado!");
+                    gebi("nome")
+                    return   
+                }
+
+                if (email.length ===0) {
+                    alert("preencha o email!");
+                    return   
+                }
+
+                if (idade.length < 9) {
+                    alert("idade deve ser maior que 9!");    
+                    return
+                }
+
+                if (altura.length < 1.40) {
+                    alert("Altura deve ser maior que 1,40!");    
+                    return
+                }
+
+                
+                if (peso.length (peso > 40) && (peso < 150)) {
+                    alert("Peso deve ser maior que 1,40!");    
+                    return
+                }
+
+                if (senha != 1234) && (senha != 4321) {
+                    alert("senha deve ser 1234 ou 4321!");    
+                    return
+                }
+
+                gebi("meuForm").submit()
+                alert("Sucesso!")
+
+		    }
+
+        
+    </script>
+    <script type="text/javascript" scr="js/myscript.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Validar</h1>
+        <form id="meuForm" action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+            <fieldset align="center" style="width:270px"> 
+                <legend>Login:</legend>
+                Nome: <input id="idNome" type="name"  required autofocus value="Fulano"><br>
+                Email: <input id="idEmail" type="email" required placeholder="nada@nada.com"><br>
+                Idade: <input id="idIdade" type="number" step="1"  min="10"><br> 
+                Altura: <input id="idAltura" type="number" step="1"><br> 
+                Peso: <input id="idPeso" type="number" step="0.1"  min="41"><br> 
+                Senha: <input id="idSenha" type="password" autocomplete="current-password"><br> 
+                <input type="button" value="Enviar" onclick="validar();"> 
+            </fieldset> 
+        </form>
+        </center>
+</body>
+</html>
